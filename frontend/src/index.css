@@ -139,7 +139,7 @@ img{
 .navbar-brand{
   overflow: hidden;
   height: 55px;
-  width: 240px;
+  width: 140px;
   margin: 0 5px;
   object-fit: contain;
   cursor: pointer;

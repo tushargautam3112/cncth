@@ -6,10 +6,10 @@ function HomeScreen() {
   return (
     <>
       <Helmet>
-        <title>Cups & Cakes</title>
+        <title>T-house</title>
       </Helmet>
-      <div className="mx-3">
-      {/* <Carousel className='w-100 carousel'>
+      {/* <div className="mx-3"> */}
+      {/* <Carousel className='carousel'>
         <Carousel.Item interval={5500}>
           <img
             className="d-block w-100 text-black"
@@ -46,7 +46,7 @@ function HomeScreen() {
       </Carousel> */}
       {/* <div className="spacer d-md-block d-none"/> */}
       <h1>Featured Items</h1>
-      </div>
+      {/* </div> */}
       <AllProducts/>
 
     </>

@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import Navbar from 'react-bootstrap/Navbar';
-import Logo from './logo.png'
+import Logo from './transparent-logo.png'
 import Badge from 'react-bootstrap/Badge';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -154,7 +154,7 @@ function App() {
           <Nav className="flex-column w-100 p-5">
             <div className='my-3'>
             <Nav.Item>
-              <h4>Categories</h4>
+              <h4>Menu</h4>
             </Nav.Item>
             <div className='my-3'>
             {categories.map((category) => (
@@ -163,7 +163,7 @@ function App() {
                   to={{ pathname: '/search', search: `category=${category}` }}
                   onClick={() => setSidebarIsOpen(false)}
                 >
-                  <h6 classname="my-2">{category}</h6>
+                  <h6 className="my-2">{category}</h6>
                 </LinkContainer>
               </Nav.Item>
             ))}
@@ -273,7 +273,7 @@ function App() {
           </Container>
         </main>
         <footer>
-          <div className="text-center footer p-5 mt-5">Cups And Cakes 2023</div>
+          <div className="text-center footer p-5 mt-5">T-house 2023</div>
         </footer>
       </div>
     </BrowserRouter>
