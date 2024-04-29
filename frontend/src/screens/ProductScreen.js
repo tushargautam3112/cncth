@@ -124,7 +124,7 @@ function ProductScreen() {
     <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
-      <Row className='productLand mx-1'>
+      <Row className='productLand mx-1 mt-4 mb-2'>
         <Col md={6}>
           <ListGroup >
             <ListGroup.Item>
@@ -170,7 +170,7 @@ function ProductScreen() {
                         <ListGroup.Item>
                           <Row>
                             <Col>Price:</Col>
-                            <Col>${product.price}</Col>
+                            <Col>Rs.{product.price}</Col>
                           </Row>
                         </ListGroup.Item>
                         <ListGroup.Item>
@@ -211,9 +211,9 @@ function ProductScreen() {
         </Col>
       </Row>
       <Row>
-          <div className="my-3 d-md-flex rounded">
-            <Col md={7} className='mx-3'>
-              <h2 ref={reviewsRef}>Reviews</h2>
+          <div className="my-3 mx-1 d-md-flex rounded">
+            <Col md={6} className='mx-4'>
+              <h3 ref={reviewsRef}>Reviews</h3>
               <div className="mb-2">
                 {product.reviews.length === 0 && (
                   <MessageBox>There is no review yet..</MessageBox>
@@ -234,13 +234,12 @@ function ProductScreen() {
                 ))}
               </ListGroup>
             </Col>
-            <Col md={4}>
-              <div className="my-2 mx-3">
+            <Col md={5}>
+              <div className="my-2 mx-4">
                 {userInfo ? (
                   <form onSubmit={submitHandler}>
-                    <h2>Write a Review</h2>
+                    <h3>Write a Review</h3>
                     <Form.Group className="mb-3" controlId="rating">
-                      <Form.Label>Rating</Form.Label>
                       <Form.Select
                         aria-label="Rating"
                         value={rating}
@@ -288,7 +287,7 @@ function ProductScreen() {
           </div>
       </Row>
       <div className='spacer' />
-      <h1>You may also Like..</h1>
+      <h2 className='mx-3'>You may also Like..</h2>
       <AllProducts />
     </div>
   );

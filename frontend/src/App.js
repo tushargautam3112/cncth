@@ -37,6 +37,7 @@ import UserEditScreen from './screens/UserEditScreen';
 import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
 import ResetPasswordScreen from './screens/ResetPasswordScreen';
 import ScrollTop from './components/ScrollTop'
+import Footer from './components/Footer';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -87,7 +88,7 @@ function App() {
                 Menu
               </span>
               <LinkContainer to="/" className="navbar-brand">
-                  <img src={Logo} alt=""/>                
+                  <img src='https://see.fontimg.com/api/renderfont4/8yBD/eyJyIjoiZnMiLCJoIjoxNTgsInciOjEyNTAsImZzIjoxMjYsImZnYyI6IiMzMDMwMzAiLCJiZ2MiOiIjMzAxNjE2IiwidCI6MX0/VC1ob3VzZQ/daisys-delights.png' alt=""/>                
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" id='burger' />
               <Navbar.Collapse id="basic-navbar-nav" className='nav-expanded'>
@@ -272,9 +273,7 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer>
-          <div className="text-center footer p-5 mt-5">T-house 2023</div>
-        </footer>
+        <Footer/>
       </div>
     </BrowserRouter>
   );

@@ -14,12 +14,13 @@ export default function SearchBox() {
   };
 
   return (
-    <Form className="d-flex me-auto rounded" onSubmit={submitHandler}>
+    <Form className="d-flex me-auto rounded-2xl" onSubmit={submitHandler}>
       <InputGroup>
         <FormControl
           type="text"
           name="q"
           id="q"
+          className='px-md-4 px-3'
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search Products..."
           aria-label="Search Products"
