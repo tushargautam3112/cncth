@@ -17,7 +17,7 @@ function HomeScreen() {
             <Link to='/search?category=Cakes&query=all&price=all&rating=all&order=newest&page=1'>
               <img
                 className="d-block w-100 text-black"
-                src="/images/Car11.jpg"
+                src="/images/car11.jpg"
                 alt="Img"
               />
             </Link>
