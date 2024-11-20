@@ -211,80 +211,80 @@ function ProductScreen() {
         </Col>
       </Row>
       <Row>
-          <div className="my-3 mx-1 d-md-flex rounded">
-            <Col md={6} className='mx-4'>
-              <h3 ref={reviewsRef}>Reviews</h3>
-              <div className="mb-2">
-                {product.reviews.length === 0 && (
-                  <MessageBox>There is no review yet..</MessageBox>
-                )}
-              </div>
-              <ListGroup>
-                {product.reviews.map((review) => (
-                  <ListGroup.Item key={review._id} className='p-4'>
-                    <div className='d-flex'>
+        <div className="my-3 mx-1 d-md-flex rounded">
+          <Col md={6} className='mx-4'>
+            <h3 ref={reviewsRef}>Reviews</h3>
+            <div className="mb-2">
+              {product.reviews.length === 0 && (
+                <MessageBox>There is no review yet..</MessageBox>
+              )}
+            </div>
+            <ListGroup>
+              {product.reviews.map((review) => (
+                <ListGroup.Item key={review._id} className='p-4'>
+                  <div className='d-flex'>
                     <div>
-                    <strong>{review.name}</strong>
-                    <Rating rating={review.rating} caption=" "></Rating>
+                      <strong>{review.name}</strong>
+                      <Rating rating={review.rating} caption=" "></Rating>
                     </div>
                     <p>{review.createdAt.substring(0, 10)}</p>
-                    </div>
-                    <p className='mt-4'>{review.comment}</p>
-                  </ListGroup.Item>
-                ))}
-              </ListGroup>
-            </Col>
-            <Col md={5}>
-              <div className="my-2 mx-4">
-                {userInfo ? (
-                  <form onSubmit={submitHandler}>
-                    <h3>Write a Review</h3>
-                    <Form.Group className="mb-3" controlId="rating">
-                      <Form.Select
-                        aria-label="Rating"
-                        value={rating}
-                        onChange={(e) => setRating(e.target.value)}
-                      >
-                        <option value="">Select...</option>
-                        <option value="1">1- Poor</option>
-                        <option value="2">2- Fair</option>
-                        <option value="3">3- Good</option>
-                        <option value="4">4- Very good</option>
-                        <option value="5">5- Excelent</option>
-                      </Form.Select>
-                    </Form.Group>
-                    <FloatingLabel
-                      controlId="floatingTextarea"
-                      label="Comments"
-                      className="mb-3"
+                  </div>
+                  <p className='mt-4'>{review.comment}</p>
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </Col>
+          <Col md={5}>
+            <div className="my-2 mx-4">
+              {userInfo ? (
+                <form onSubmit={submitHandler}>
+                  <h3>Write a Review</h3>
+                  <Form.Group className="mb-3" controlId="rating">
+                    <Form.Select
+                      aria-label="Rating"
+                      value={rating}
+                      onChange={(e) => setRating(e.target.value)}
                     >
-                      <Form.Control
-                        as="textarea"
-                        placeholder="Leave a comment here"
-                        value={comment}
-                        onChange={(e) => setComment(e.target.value)}
-                      />
-                    </FloatingLabel>
+                      <option value="">Select...</option>
+                      <option value="1">1- Poor</option>
+                      <option value="2">2- Fair</option>
+                      <option value="3">3- Good</option>
+                      <option value="4">4- Very good</option>
+                      <option value="5">5- Excelent</option>
+                    </Form.Select>
+                  </Form.Group>
+                  <FloatingLabel
+                    controlId="floatingTextarea"
+                    label="Comments"
+                    className="mb-3"
+                  >
+                    <Form.Control
+                      as="textarea"
+                      placeholder="Leave a comment here"
+                      value={comment}
+                      onChange={(e) => setComment(e.target.value)}
+                    />
+                  </FloatingLabel>
 
-                    <div className="mb-3">
-                      <Button disabled={loadingCreateReview} type="submit">
-                        Submit
-                      </Button>
-                      {loadingCreateReview && <LoadingBox></LoadingBox>}
-                    </div>
-                  </form>
-                ) : (
-                  <MessageBox>
-                    Please{' '}
-                    <Link to={`/signin?redirect=/product/${product.slug}`}>
-                      Sign In
-                    </Link>{' '}
-                    to write a review
-                  </MessageBox>
-                )}
-              </div>
-            </Col>
-          </div>
+                  <div className="mb-3">
+                    <Button disabled={loadingCreateReview} type="submit">
+                      Submit
+                    </Button>
+                    {loadingCreateReview && <LoadingBox></LoadingBox>}
+                  </div>
+                </form>
+              ) : (
+                <MessageBox>
+                  Please{' '}
+                  <Link to={`/signin?redirect=/product/${product.slug}`}>
+                    Sign In
+                  </Link>{' '}
+                  to write a review
+                </MessageBox>
+              )}
+            </div>
+          </Col>
+        </div>
       </Row>
       <div className='spacer' />
       <h2 className='mx-3'>You may also Like..</h2>

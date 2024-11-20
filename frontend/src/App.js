@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import Navbar from 'react-bootstrap/Navbar';
-import Logo from './transparent-logo.png'
+import Logo from './logo.png'
 import Badge from 'react-bootstrap/Badge';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -79,7 +79,10 @@ function App() {
         }
       >
         <ToastContainer position="bottom-center" limit={1} />
-        <header>
+        <header>             
+        <LinkContainer to="/">
+          <img src={Logo} alt="ter" className='tab-nav'/> 
+        </LinkContainer>  
           <Navbar expand="lg" className='navbar px-3'>
             <Container>
               <span className='burger nav-link'
@@ -88,8 +91,9 @@ function App() {
                 Menu
               </span>
               <LinkContainer to="/" className="navbar-brand">
-                  <img src='https://see.fontimg.com/api/renderfont4/8yBD/eyJyIjoiZnMiLCJoIjoxNTgsInciOjEyNTAsImZzIjoxMjYsImZnYyI6IiMzMDMwMzAiLCJiZ2MiOiIjMzAxNjE2IiwidCI6MX0/VC1ob3VzZQ/daisys-delights.png' alt=""/>                
+                  <img src={Logo} alt="ter"/>                
               </LinkContainer>
+              
               <Navbar.Toggle aria-controls="basic-navbar-nav" id='burger' />
               <Navbar.Collapse id="basic-navbar-nav" className='nav-expanded'>
                 <SearchBox/>
@@ -120,7 +124,7 @@ function App() {
                       </Link>
                     </NavDropdown>
                   ) : (
-                    <Link className="nav-link" to="/signin">
+                    <Link className="nav-link" data-toggle="collapse" data-target="#basic-navbar-nav" to="/signin">
                       Sign In
                     </Link>
                   )}
@@ -155,19 +159,25 @@ function App() {
           <Nav className="flex-column w-100 p-5">
             <div className='my-3'>
             <Nav.Item>
-              <h4>Menu</h4>
+              <h4 className='text-sm'>Menu</h4>
             </Nav.Item>
-            <div className='my-3'>
-            {categories.map((category) => (
-              <Nav.Item key={category}>
-                <LinkContainer
-                  to={{ pathname: '/search', search: `category=${category}` }}
-                  onClick={() => setSidebarIsOpen(false)}
-                >
-                  <h6 className="my-2">{category}</h6>
-                </LinkContainer>
-              </Nav.Item>
-            ))}
+            <div className='my-3 menu-item-container'>
+              {categories.map((category) => (
+                <Nav.Item key={category} className="menu-item">
+                  <LinkContainer
+                    to={{ pathname: '/search', search: `category=${category}` }}
+                    onClick={() => setSidebarIsOpen(false)}
+                  >
+                    <h6 className="my-2">{category}</h6>
+                  </LinkContainer>
+                </Nav.Item>
+              ))}
+              <Nav.Item className="menu-item">
+                    
+                  
+                    <h6 className="my-2" onClick={() => setSidebarIsOpen(false)}>Close</h6>
+                 
+                </Nav.Item>
             </div>
             </div>
           </Nav>

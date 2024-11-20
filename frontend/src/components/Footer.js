@@ -11,11 +11,10 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">
-                                    T-House
+                                    Cups And Cakes
                                 </h6>
                                 <p>
-                                    Here you can use rows and columns to organize your footer
-                                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing
                                     elit.
                                 </p>
                             </div>
@@ -58,7 +57,7 @@ const Footer = () => {
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">Contact</h6>
                                 <p><i className="fas fa-home mr-3"></i> Kanpur, UP</p>
-                                <p><i className="fas fa-envelope mr-3"></i> thouse@gmail.com</p>
+                                <p><i className="fas fa-envelope mr-3"></i> cnc@gmail.com</p>
                                 <p><i className="fas fa-phone mr-3"></i> 12345 67890</p>
                                 <p><i className="fas fa-print mr-3"></i> 12345 67899</p>
                             </div>
@@ -70,8 +69,8 @@ const Footer = () => {
                             <div className="row d-flex align-items-center">
 
                                     <div className="p-3 text-center">
-                                        © 2023 T-house:
-                                        thouse.com
+                                        © 2024 Cups And Cakes:
+                                        cupsandcakes.com
          
                                 </div>
                             </div>

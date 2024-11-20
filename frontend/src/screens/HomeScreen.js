@@ -7,7 +7,7 @@ function HomeScreen() {
   return (
     <>
       <Helmet>
-        <title>T-house</title>
+        <title>Cups & Cakes</title>
       </Helmet>
       <div className="vw-100 position-absolute top-0 start-0">
         <div className="position-absolute w-100 carousel-gradient bottom-0" />
