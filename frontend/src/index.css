@@ -424,6 +424,9 @@ button.thumbnail {
     height: 40px;
     width: 150px;
   }
+  .navbar{
+    background-color: #fffbf7;
+  }
 }
 
 @media (max-width: 300px) {
