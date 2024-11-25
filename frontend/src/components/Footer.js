@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -21,36 +22,51 @@ const Footer = () => {
                             <hr className="w-100 clearfix d-md-none" />
                             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">Products</h6>
+                                <Link to='/search?category=Cake&query=all&price=all&rating=all&order=newest&page=1'>
                                 <p>
-                                    Burgers
+                                    Cakes
                                 </p>
+                                </Link>
+                                <Link to='/search?category=csake&query=all&price=all&rating=all&order=newest&page=1'>
                                 <p>
-                                    Sandwitches
+                                    Cupcakes
                                 </p>
+                                </Link>
+                                <Link to='/search?category=Cake&query=all&price=all&rating=all&order=newest&page=1'>
                                 <p>
                                     Drinks
                                 </p>
+                                <Link to='/search?category=house&query=all&price=all&rating=all&order=newest&page=1'></Link>
                                 <p>
-                                    Momos
+                                    GingerBread
                                 </p>
+                                </Link>
                             </div>
                             <hr className="w-100 clearfix d-md-none" />
                             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">
                                     Useful links
                                 </h6>
+                                <Link to='/profile'>
                                 <p>
                                     Your Account
                                 </p>
+                                </Link>
+                                <Link to='/orderhistory'>
                                 <p>
-                                    Become an Affiliate
+                                    Order History
                                 </p>
+                                </Link>
+                                <Link to='/orderhistory'>
                                 <p>
                                     Shipping Rates
                                 </p>
+                                </Link>
+                                <Link to='/profile'>
                                 <p>
                                     Help
                                 </p>
+                                </Link>
                             </div>
 
                             <hr className="w-100 clearfix d-md-none" />
