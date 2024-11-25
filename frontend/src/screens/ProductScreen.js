@@ -221,7 +221,7 @@ function ProductScreen() {
             </div>
             <ListGroup>
               {product.reviews.map((review) => (
-                <ListGroup.Item key={review._id} className='p-4'>
+                <ListGroup.Item key={review._id} className='p-4 mb-4'>
                   <div className='d-flex'>
                     <div>
                       <strong>{review.name}</strong>
